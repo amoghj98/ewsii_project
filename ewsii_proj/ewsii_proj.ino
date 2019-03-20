@@ -8,7 +8,11 @@ class lcd lcd(0x27,16,2);
 void setup() {
   // put your setup code here, to run once:
   lcd.begin();
-  lcd.print("Hello World!");
+  lcd.noBacklight();
+  lcd.print("Hello EWS Group");
+  lcd.setCursor(0,1);
+  lcd.print("B1-1");
+  //lcd.noBacklight();
 //  pinMode(0,OUTPUT);
 //  pinMode(1,OUTPUT);
 //  pinMode(2,OUTPUT);

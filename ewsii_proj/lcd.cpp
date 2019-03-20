@@ -44,7 +44,7 @@ void lcd::begin() {
 		_displayfunction |= LCD_5x10DOTS;
 	}
 
-	// SEE PAGE 45/46 FOR INITIALIZATION SPECIFICATION!
+	// SEE PAGE 45/46 OF THE DATASHEET FOR INITIALIZATION SPECIFICATION!
 	// according to datasheet, we need at least 40ms after power rises above 2.7V
 	// before sending commands. Arduino can turn on way befer 4.5V so we'll wait 50
 	delay(50);
