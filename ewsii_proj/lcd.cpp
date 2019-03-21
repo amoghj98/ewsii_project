@@ -1,5 +1,4 @@
 #include "lcd.h"
-#include <inttypes.h>
 #include <Arduino.h>
 #include <Wire.h>
 

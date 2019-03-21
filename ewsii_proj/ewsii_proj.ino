@@ -9,9 +9,9 @@ void setup() {
   // put your setup code here, to run once:
   lcd.begin();
   lcd.noBacklight();
-  lcd.print("Hello EWS Group");
+  lcd.print("The LCD says");
   lcd.setCursor(0,1);
-  lcd.print("B1-1");
+  lcd.print("hello!");
   //lcd.noBacklight();
 //  pinMode(0,OUTPUT);
 //  pinMode(1,OUTPUT);

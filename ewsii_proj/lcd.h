@@ -1,5 +1,5 @@
-#ifndef FDB_LIQUID_CRYSTAL_I2C_H
-#define FDB_LIQUID_CRYSTAL_I2C_H
+#ifndef _lcd_i2c_
+#define _lcd_i2c_
 
 #include <inttypes.h>
 #include <Print.h>
@@ -13,13 +13,11 @@
 #define LCD_FUNCTIONSET 0x20
 #define LCD_SETCGRAMADDR 0x40
 #define LCD_SETDDRAMADDR 0x80
-
 // flags for display entry mode
 #define LCD_ENTRYRIGHT 0x00
 #define LCD_ENTRYLEFT 0x02
 #define LCD_ENTRYSHIFTINCREMENT 0x01
 #define LCD_ENTRYSHIFTDECREMENT 0x00
-
 // flags for display on/off control
 #define LCD_DISPLAYON 0x04
 #define LCD_DISPLAYOFF 0x00
@@ -27,13 +25,11 @@
 #define LCD_CURSOROFF 0x00
 #define LCD_BLINKON 0x01
 #define LCD_BLINKOFF 0x00
-
 // flags for display/cursor shift
 #define LCD_DISPLAYMOVE 0x08
 #define LCD_CURSORMOVE 0x00
 #define LCD_MOVERIGHT 0x04
 #define LCD_MOVELEFT 0x00
-
 // flags for function set
 #define LCD_8BITMODE 0x10
 #define LCD_4BITMODE 0x00
@@ -41,7 +37,6 @@
 #define LCD_1LINE 0x00
 #define LCD_5x10DOTS 0x04
 #define LCD_5x8DOTS 0x00
-
 // flags for backlight control
 #define LCD_BACKLIGHT 0x08
 #define LCD_NOBACKLIGHT 0x00
@@ -71,7 +66,7 @@ public:
 	lcd(uint8_t lcd_addr, uint8_t lcd_cols, uint8_t lcd_rows, uint8_t charsize = LCD_5x8DOTS);
 
 	/**
-	 * Set the LCD display in the correct begin state, must be called before anything else is done.
+	 * Set the LCD display in the correct initial state, must be called before anything else is done.
 	 */
 	void begin();
 
@@ -85,7 +80,7 @@ public:
 	 * Next print/write operation will will start from the first position on the LCD display.
 	 */
 	void home();
-
+	
 	 /**
 	  * Do not show any characters on the LCD display. Backlight state will remain unchanged.
 	  * Also all characters written on the display will return, when the display in enabled again.
@@ -162,4 +157,4 @@ private:
 	uint8_t _backlightval;
 };
 
-#endif // FDB_LIQUID_CRYSTAL_I2C_H
+#endif
