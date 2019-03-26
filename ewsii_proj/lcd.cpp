@@ -14,7 +14,7 @@
 //    C = 0; Cursor off
 //    B = 0; Blinking off
 // 4. Entry mode set:
-//    I/D = 1; Increment by 1
+//    I/D = 1; Increment by 
 //    S = 0; No shift
 //
 // Note, however, that resetting the Arduino doesn't reset the LCD, so we

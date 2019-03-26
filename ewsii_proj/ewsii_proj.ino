@@ -3,15 +3,14 @@
 //
 //class coloursensor cs;
 class lcd lcd(0x27,16,2);
+double t=0.1427;
 //uint8_t reading;
 
 void setup() {
   // put your setup code here, to run once:
   lcd.begin();
   lcd.noBacklight();
-  lcd.print("The LCD says");
-  lcd.setCursor(0,1);
-  lcd.print("hello!");
+  lcd.print(t);
   //lcd.noBacklight();
 //  pinMode(0,OUTPUT);
 //  pinMode(1,OUTPUT);
