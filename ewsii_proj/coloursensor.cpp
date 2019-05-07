@@ -11,8 +11,6 @@ uint8_t coloursensor::set_freq_scale(uint8_t s)
 {
 	switch(s)
 	{
-		case 0: digitalWrite(supply, false);
-		break;
 		case 2: digitalWrite(s0, false);
 		digitalWrite(s1, true);
 		break;
@@ -55,7 +53,6 @@ uint8_t coloursensor::set_phdiode_type(uint8_t t)
 
 uint8_t coloursensor::init()                  // initialisation function
 {
-	digitalWrite(supply,true);
 	digitalWrite(oe, true);
 	digitalWrite(s0, false);
 	digitalWrite(s1, false);
@@ -66,11 +63,12 @@ uint8_t coloursensor::init()                  // initialisation function
 
 uint8_t coloursensor::getval(uint8_t t, uint8_t s)
 {
-	uint16_t th,ttot;
+	int th,ttot;
 	set_phdiode_type(t);
 	set_freq_scale(s);
 	digitalWrite(oe, false);
 	th=pulseIn(freq_out, false);
+  th=pulseIn(freq_out, false);
   digitalWrite(oe,true);
 	ttot=2*th;
 	return ttot;

@@ -3,13 +3,12 @@
 
 #include <Arduino.h>
 
-#define s0 0
-#define s1 1
-#define s2 2
-#define s3 3
-#define freq_out 4
-#define oe 5
-#define supply 6
+#define s0 5
+#define s1 6
+#define s2 7
+#define s3 8
+#define freq_out 9
+#define oe 10
 
 class coloursensor
 {
